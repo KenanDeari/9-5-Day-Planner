@@ -7,7 +7,7 @@ function hour(time) {
 }
 // created function to determine date & time of user. Source: https://momentjs.com/
 $(document).ready(function () {
-    $("#currentDay").text(moment().format("dddd, MMMM, h:mm a"));
+    $("#currentDay").text(moment().format("dddd, MMMM Do, h:mm a"));
     $("#currentDay").css("text-decoration", "underline");
     for (var i = 9; i < 18; i++) {
 
@@ -15,13 +15,13 @@ $(document).ready(function () {
         var row = $(`<div data-time=${i} id='${i}' class="row">`);
 
         // hour column created below (9AM-5PM)
-        var hourCol = $('<div class="col-sm-1"> <p class="hour">' + hour(i) + '</p>');
+        var hourCol = $('<div class="col-lg-1"> <p class="hour">' + hour(i) + '</p>');
 
         //create column 2 for event info
-        var eventCol = $(`<div class="col-sm-10 past"><textarea id=text${i} class="event" placeholder="Plave your tasks here"></textarea>`);
+        var eventCol = $(`<div class="col-lg-10 past"><textarea id=text${i} class="event" placeholder="Plave your tasks here"></textarea>`);
 
         //create column 3 for the save button w/ fontAwsome logo 
-        var saveBtnCol = $(`<div class="col-sm-1"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`)
+        var saveBtnCol = $(`<div class="col-lg-1"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`)
 
 
         // appended columns to the row above
@@ -35,9 +35,9 @@ $(document).ready(function () {
     }
     hour();
 
-    // function to change colors for past & future || sources: https://www.w3schools.com/js/js_dates.asp, https://www.w3schools.com/jsref/jsref_gettime.asp
+    // function to change colors for past & future || sources: https://www.w3schools.com/js/js_dates.asp, https://www.w3schools.com/jsref/jsref_gethours.asp
     function updateColors() {
-        var currentTime = new Date().getTime();
+        var currentTime = new Date().getHours();
         for (var i = 9; i < 18; i++) {
             if ($(`#${i}`).data("time") == currentTime) {
                 $(`#text${i}`).addClass("present");
