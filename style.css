@@ -1,0 +1,83 @@
+/* background image added */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-image: url(Assets/background.jpg);
+}
+
+textarea{
+  background: transparent;
+  border: none;
+  resize: none;
+  color: black;
+  border-left: 1px solid black;
+  padding: 15px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: wheat;
+  border-radius: 0;
+  border-bottom: 10px solid transparent;
+}
+
+.description{
+  white-space: pre-wrap;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 90px;
+  border-top: 3px solid white;;
+}
+
+.hour {
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: x-large;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: black;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveBtn {
+  border-left: 1px solid transparent;
+  padding: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: x-large;
+  background-color: transparent;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
